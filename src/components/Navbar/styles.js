@@ -65,4 +65,18 @@ export default makeStyles((theme) => ({
       width: '20ch',
     },
   },
+  navlinks: {
+    marginLeft: theme.spacing(10),
+    display: "flex",
+  },
+  link: {
+    textDecoration: "none",
+    color: "black",
+    fontSize: "20px",
+    marginLeft: theme.spacing(20),
+    "&:hover": {
+      color: "red",
+      borderBottom: "1px solid white",
+    },
+  },
 }));

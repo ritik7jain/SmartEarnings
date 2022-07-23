@@ -1,13 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { CssBaseline } from '@material-ui/core';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Products, Cart, Checkout } from './components';
 import { commerce } from './lib/commerce';
+import Home from './components/Home/home';
+import About from './components/About/about';
+import 'antd/dist/antd.css';
+import {Layout} from 'antd'; 
 
+
+const {Header,Content} =Layout;
 const App = () => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [products, setProducts] = useState([]);
+  const [home]=useState([]);
   const [cart, setCart] = useState({});
   const [order, setOrder] = useState({});
   const [errorMessage, setErrorMessage] = useState('');
@@ -72,14 +79,21 @@ const App = () => {
   const handleDrawerToggle = () => setMobileOpen(!mobileOpen);
 
   return (
+    <div>
+    
     <Router>
       <div style={{ display: 'flex' }}>
         <CssBaseline />
         <Navbar totalItems={cart.total_items} handleDrawerToggle={handleDrawerToggle} />
+        
         <Switch>
-          <Route exact path="/">
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
+
+          <Route  path="/product">
             <Products products={products} onAddToCart={handleAddToCart} handleUpdateCartQty />
           </Route>
+  
           <Route exact path="/cart">
             <Cart cart={cart} onUpdateCartQty={handleUpdateCartQty} onRemoveFromCart={handleRemoveFromCart} onEmptyCart={handleEmptyCart} />
           </Route>
@@ -89,6 +103,7 @@ const App = () => {
         </Switch>
       </div>
     </Router>
+    </div>
   );
 };
 
