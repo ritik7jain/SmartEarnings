@@ -16,11 +16,11 @@ const Home = ( ) => {
         <div className="container-fluid nav_bg " >
             <div className="row">
                 <div className="mx-auto">
-                    <div className='row'>
+                    <div className='row align-items-center' style={{minHeight: "85vh"}}>
                     <div className="col-md-6 pt-5 pt-lg-0 order-2 order-lg-1 mt-50 d-flex justify-content-center flex-column">
-                        <h1> Grow Your Income  with  <br></br>    <strong className='brand-name'>     Smart Earnings</strong></h1>
-                        <h2 className="my-3">
-                            providing help in training and qualifying Hitapps on UHRS </h2>
+                        <h1> Grow Your Income  with  <br></br>    <strong className='brand-name'>Smart Earnings</strong></h1>
+                        <h4 className="my-3">
+                            providing help in training and qualifying Hitapps on UHRS </h4>
                             <div className='mt-3'>
                               {/*<a href='' className="btn-get-started"
                                 >

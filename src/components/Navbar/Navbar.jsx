@@ -44,7 +44,7 @@ const PrimarySearchAppBar = ({ totalItems }) => {
       <AppBar position="fixed" className={classes.appBar} color="inherit">
         <Toolbar>
         <Typography component={Link} to="/" variant="h5" className={classes.title} color="inherit">
-            <img src={logo} alt="$mart Earning$ " height="25px" className={classes.image} /> $MART EARNING$
+            <img src={logo} alt="Smart Earnings " height="25px" className={classes.image} /> SMART EARNINGS
           </Typography>
 
           {isMobile ? (

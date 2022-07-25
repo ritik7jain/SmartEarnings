@@ -13,6 +13,7 @@ const Cart = ({ cart, onUpdateCartQty, onRemoveFromCart, onEmptyCart }) => {
   const renderEmptyCart = () => (
     <Typography variant="subtitle1">You have no items in your shopping cart,
       <Link className={classes.link} to="/">start adding some</Link>!
+      <img src="" alt="" />
     </Typography>
   );
 
@@ -27,7 +28,7 @@ const Cart = ({ cart, onUpdateCartQty, onRemoveFromCart, onEmptyCart }) => {
           </Grid>
         ))}
       </Grid>
-      <div className={classes.cardDetails}>
+      <div className={classes.cardDetails} style={{paddingBottom: "64px"}}>
         <Typography variant="h4">Subtotal: {cart.subtotal.formatted_with_symbol}</Typography>
         <div>
           <Button className={classes.emptyButton} size="large" type="button" variant="contained" color="secondary" onClick={handleEmptyCart}>Empty cart</Button>
