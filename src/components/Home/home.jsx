@@ -15,7 +15,7 @@ const Home = ( ) => {
       <section id="header" className="d-flex  justify-content-center flex-column">
         <div className="container-fluid nav_bg " >
             <div className="row">
-                <div className="col-10 mx-auto">
+                <div className="mx-auto">
                     <div className='row'>
                     <div className="col-md-6 pt-5 pt-lg-0 order-2 order-lg-1 mt-50 d-flex justify-content-center flex-column">
                         <h1> Grow Your Income  with  <br></br>    <strong className='brand-name'>     Smart Earnings</strong></h1>

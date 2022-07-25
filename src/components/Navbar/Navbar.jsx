@@ -48,7 +48,11 @@ const PrimarySearchAppBar = ({ totalItems }) => {
           </Typography>
 
           {isMobile ? (
-          <DrawerComponent />
+          <><DrawerComponent /><IconButton component={Link} to="/cart" aria-label="Show cart items" color="inherit">
+              <Badge badgeContent={totalItems} color="secondary">
+                <ShoppingCart />
+              </Badge>
+            </IconButton></>
         ) : (
           <div className={classes.navlinks}>
             <Link to="/" className={classes.link}>

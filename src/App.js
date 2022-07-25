@@ -6,11 +6,11 @@ import { Navbar, Products, Cart, Checkout } from './components';
 import { commerce } from './lib/commerce';
 import Home from './components/Home/home';
 import About from './components/About/about';
-import 'antd/dist/antd.css';
-import {Layout} from 'antd'; 
+// import 'antd/dist/antd.css';
+// import {Layout} from 'antd'; 
 
 
-const {Header,Content} =Layout;
+// const {Header,Content} =Layout;
 const App = () => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [products, setProducts] = useState([]);
